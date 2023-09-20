@@ -21,6 +21,7 @@ export const Counter: FC<ICounter> = ({setCount, count, settings, error}) => {
       setCount(settings.startValue)
    }
 
+   console.log('')
    return (
       <div className={'wrapper'}>
          <div className={`counter ${count === settings.limit && 'count-red'}`}>{error ? 'Enter valid value' : count}</div>
