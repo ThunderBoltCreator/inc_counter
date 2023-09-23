@@ -2,7 +2,7 @@
     padding: 15px;
     border-radius: 15px;
     border: 2px solid blue;
-    width: 40%;
+    width: 250px;
 }
 
 .settings {
@@ -14,14 +14,29 @@
 
 .app-wrapper {
     margin: 0 auto;
-    width: 750px;
+    width: 800px;
     height: 100vh;
     border: 1px solid red;
     display: flex;
-    /*flex-direction: column;*/
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
+
+.app-wrapper-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.info {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 
 .counter {
     flex: 1;

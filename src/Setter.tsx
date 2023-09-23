@@ -33,6 +33,11 @@ export const Setter: FC<ISetter> = ({setSettings, settings, setError, error}) =>
    }
 
    useEffect(() => {
+      setMax(settings.limit.toString())
+      setStart(settings.startValue.toString())
+   }, [settings])
+
+   useEffect(() => {
       if (+max < 0 || +start < 0 || +max < +start) {
          setError(true)
       } else {
@@ -41,8 +46,6 @@ export const Setter: FC<ISetter> = ({setSettings, settings, setError, error}) =>
    }, [max, start])
 
    const onChangeMaxHandler = (e: ChangeEvent<HTMLInputElement>) => {
-
-
       setMax(e.currentTarget.value)
    }
    const onChangeStartHandler = (e: ChangeEvent<HTMLInputElement>) => {
